@@ -87,6 +87,9 @@ class SunrgbdDetectionVotesDataset(Dataset):
         bboxes = np.load(os.path.join(self.data_path, scan_name)+'_bbox.npy') # K,8
         point_votes = np.load(os.path.join(self.data_path, scan_name)+'_votes.npz')['point_votes'] # Nx10
 
+        #print("Index:", idx)
+        #print("bboxes:", bboxes)
+
         if not self.use_color:
             point_cloud = point_cloud[:,0:3]
         else:
@@ -208,6 +211,11 @@ class SunrgbdDetectionVotesDataset(Dataset):
         ret_dict['vote_label_mask'] = point_votes_mask.astype(np.int64)
         ret_dict['scan_idx'] = np.array(idx).astype(np.int64)
         ret_dict['max_gt_bboxes'] = max_bboxes
+        
+################################################
+        ret_dict['box3d_sizes'] = box3d_sizes
+        #print("box3d_sizes", box3d_sizes)
+
         return ret_dict
 
 def viz_votes(pc, point_votes, point_votes_mask):
@@ -252,27 +260,52 @@ def viz_obb(pc, label, mask, angle_classes, angle_residuals,
 
 def get_sem_cls_statistics():
     """ Compute number of objects for each semantic class """
-    d = SunrgbdDetectionVotesDataset(use_height=True, use_color=True, use_v1=True, augment=True)
+    d = SunrgbdDetectionVotesDataset(use_height=True, use_color=True, use_v1=True, augment=False)
+    type2class={'bed':0, 'table':1, 'sofa':2, 'chair':3, 'toilet':4, 'desk':5, 'dresser':6, 'night_stand':7, 'bookshelf':8, 'bathtub':9,'garbage_bin':10, 'box':11, 'cup':12, 'bag':13, 'telephone':14, 'bottle':15}
+    class2type = {type2class[t]:t for t in type2class}
     sem_cls_cnt = {}
+    sem_cls_sizes = {}
     for i in range(len(d)):
         if i%10==0: print(i)
         sample = d[i]
         pc = sample['point_clouds']
-        sem_cls = sample['sem_cls_label']
+        sem_cls = sample['sem_cls_label']        
         mask = sample['box_label_mask']
-        for j in sem_cls:
+
+        size = sample['box3d_sizes']
+        #print("sem cls:", sem_cls)
+        #print("size:", size)
+        #print("mask:", mask)
+
+        for j in range(len(sem_cls)):
             if mask[j] == 0: continue
-            if sem_cls[j] not in sem_cls_cnt:
-                sem_cls_cnt[sem_cls[j]] = 0
-            sem_cls_cnt[sem_cls[j]] += 1
+            if class2type[sem_cls[j]] not in sem_cls_cnt:
+                sem_cls_cnt[class2type[sem_cls[j]]] = 0
+            if class2type[sem_cls[j]] not in sem_cls_sizes:
+                sem_cls_sizes[class2type[sem_cls[j]]] = [0,0,0]
+                #sem_cls_sizes[class2type[sem_cls[j]]] = np.zeros(3).astype(np.float32)
+            sem_cls_cnt[class2type[sem_cls[j]]] += 1
+            #np.add(sem_cls_sizes[class2type[sem_cls[j]]], size[j]).astype(np.float32)           
+            sem_cls_sizes[class2type[sem_cls[j]]] = [sum(x) for x in zip(sem_cls_sizes[class2type[sem_cls[j]]], size[j])]
+            #print("----------------At i: %d, j: %d"%(i, j))
+            #print("mask", mask[j])
+            #print("sem_cls:", sem_cls[j])
+            #print("size:", size[j])
+            #print("sem_cls_sizes:", sem_cls_sizes)
+      
+    for key in sem_cls_sizes.keys():
+        n = sem_cls_cnt[key]
+        sem_cls_sizes[key] = [x / n for x in  sem_cls_sizes[key]]
     print(sem_cls_cnt)
+    print(sem_cls_sizes)
 
 if __name__=='__main__':
-    d = SunrgbdDetectionVotesDataset(use_height=True, use_color=True, use_v1=True, augment=True)
-    sample = d[200]
-    print(sample['vote_label'].shape, sample['vote_label_mask'].shape)
-    pc_util.write_ply(sample['point_clouds'], 'pc.ply')
-    viz_votes(sample['point_clouds'], sample['vote_label'], sample['vote_label_mask'])
-    viz_obb(sample['point_clouds'], sample['center_label'], sample['box_label_mask'],
-        sample['heading_class_label'], sample['heading_residual_label'],
-        sample['size_class_label'], sample['size_residual_label'])
+    #d = SunrgbdDetectionVotesDataset(use_height=True, use_color=True, use_v1=True, augment=True)
+    #sample = d[200]
+    #print(sample['vote_label'].shape, sample['vote_label_mask'].shape)
+    #pc_util.write_ply(sample['point_clouds'], 'pc.ply')
+    #viz_votes(sample['point_clouds'], sample['vote_label'], sample['vote_label_mask'])
+    #viz_obb(sample['point_clouds'], sample['center_label'], sample['box_label_mask'],
+        #sample['heading_class_label'], sample['heading_residual_label'],
+        #sample['size_class_label'], sample['size_residual_label'])
+    get_sem_cls_statistics()

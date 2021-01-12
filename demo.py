@@ -63,9 +63,11 @@ if __name__=='__main__':
 
     # Init the model and optimzier
     MODEL = importlib.import_module('votenet') # import network module
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cpu")
+    #device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     net = MODEL.VoteNet(num_proposal=256, input_feature_dim=1, vote_factor=1,
-        sampling='seed_fps', num_class=DC.num_class,
+    sampling='vote_fps', num_class=DC.num_class,
+        #sampling='seed_fps', num_class=DC.num_class,
         num_heading_bin=DC.num_heading_bin,
         num_size_cluster=DC.num_size_cluster,
         mean_size_arr=DC.mean_size_arr).to(device)
@@ -73,7 +75,7 @@ if __name__=='__main__':
     
     # Load checkpoint
     optimizer = optim.Adam(net.parameters(), lr=0.001)
-    checkpoint = torch.load(checkpoint_path)
+    checkpoint = torch.load(checkpoint_path, map_location=device)
     net.load_state_dict(checkpoint['model_state_dict'])
     optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
     epoch = checkpoint['epoch']

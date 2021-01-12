@@ -35,6 +35,7 @@ void gather_points_kernel_wrapper(int b, int c, int n, int npoints,
 }
 
 // input: grad_out(b, c, m) idx(b, m)
+// b: batch, c: # of features, m: npoints(centers), n: total # of points
 // output: grad_points(b, c, n)
 __global__ void gather_points_grad_kernel(int b, int c, int n, int m,
                                           const float *__restrict__ grad_out,
@@ -44,6 +45,8 @@ __global__ void gather_points_grad_kernel(int b, int c, int n, int m,
     for (int l = blockIdx.y; l < c; l += gridDim.y) {
       for (int j = threadIdx.x; j < m; j += blockDim.x) {
         int a = idx[i * m + j];
+        //atomicAdd(address, val): Add val to *address  and save this at address again.
+        //for points selected as centers, assing grad_out.
         atomicAdd(grad_points + (i * c + l) * n + a,
                   grad_out[(i * c + l) * m + j]);
       }

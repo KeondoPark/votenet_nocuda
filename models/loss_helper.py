@@ -126,6 +126,10 @@ def compute_box_and_sem_cls_loss(end_points, config):
     num_size_cluster = config.num_size_cluster
     num_class = config.num_class
     mean_size_arr = config.mean_size_arr
+    #print("Num heading bin:", num_heading_bin)
+    #print("Num size cluser:", num_size_cluster)
+    #print("Num class:", num_class)
+    #print("Num mean size arr:", mean_size_arr)
 
     object_assignment = end_points['object_assignment']
     batch_size = object_assignment.shape[0]

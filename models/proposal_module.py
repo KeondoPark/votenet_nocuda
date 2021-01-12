@@ -37,7 +37,8 @@ def decode_scores(net, end_points, num_class, num_heading_bin, num_size_cluster,
     size_residuals_normalized = net_transposed[:,:,5+num_heading_bin*2+num_size_cluster:5+num_heading_bin*2+num_size_cluster*4].view([batch_size, num_proposal, num_size_cluster, 3]) # Bxnum_proposalxnum_size_clusterx3
     end_points['size_scores'] = size_scores
     end_points['size_residuals_normalized'] = size_residuals_normalized
-    end_points['size_residuals'] = size_residuals_normalized * torch.from_numpy(mean_size_arr.astype(np.float32)).cuda().unsqueeze(0).unsqueeze(0)
+    #end_points['size_residuals'] = size_residuals_normalized * torch.from_numpy(mean_size_arr.astype(np.float32)).cuda().unsqueeze(0).unsqueeze(0)
+    end_points['size_residuals'] = size_residuals_normalized * torch.from_numpy(mean_size_arr.astype(np.float32)).unsqueeze(0).unsqueeze(0)
 
     sem_cls_scores = net_transposed[:,:,5+num_heading_bin*2+num_size_cluster*4:] # Bxnum_proposalx10
     end_points['sem_cls_scores'] = sem_cls_scores
@@ -85,7 +86,7 @@ class ProposalModule(nn.Module):
         """
         if self.sampling == 'vote_fps':
             # Farthest point sampling (FPS) on votes
-            xyz, features, fps_inds = self.vote_aggregation(xyz, features)
+            xyz, features, fps_inds, _ = self.vote_aggregation(xyz, features)
             sample_inds = fps_inds
         elif self.sampling == 'seed_fps': 
             # FPS on seed and choose the votes corresponding to the seeds

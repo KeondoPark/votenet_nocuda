@@ -13,3 +13,7 @@ at::Tensor three_interpolate(at::Tensor points, at::Tensor idx,
                              at::Tensor weight);
 at::Tensor three_interpolate_grad(at::Tensor grad_out, at::Tensor idx,
                                   at::Tensor weight, const int m);
+
+at::Tensor inv_ball_query_nocuda(at::Tensor unknowns, at::Tensor knows, at::Tensor grouped_xyz, at::Tensor idx);
+at::Tensor inv_interpolate_nocuda(at::Tensor points, at::Tensor idx);
+at::Tensor inv_interpolate_nocuda_grad(at::Tensor grad_out, at::Tensor idx, int m);

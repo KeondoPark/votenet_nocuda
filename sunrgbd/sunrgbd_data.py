@@ -26,7 +26,8 @@ sys.path.append(os.path.join(BASE_DIR, '../utils/'))
 import pc_util
 import sunrgbd_utils
 
-DEFAULT_TYPE_WHITELIST = ['bed','table','sofa','chair','toilet','desk','dresser','night_stand','bookshelf','bathtub']
+#DEFAULT_TYPE_WHITELIST = ['bed','table','sofa','chair','toilet','desk','dresser','night_stand','bookshelf','bathtub']
+DEFAULT_TYPE_WHITELIST = ['bed','table','sofa','chair','toilet','desk','dresser','night_stand','bookshelf','bathtub','garbage_bin','box','cup','bag','telephone','bottle']
 
 class sunrgbd_object(object):
     ''' Load and parse object data '''
@@ -197,7 +198,9 @@ def extract_sunrgbd_data(idx_filename, split, output_folder, num_point=20000,
     if not os.path.exists(output_folder):
         os.mkdir(output_folder)
 
-    for data_idx in data_idx_list:
+    for data_idx in data_idx_list:        
+        if data_idx <= 2983:
+            continue
         print('------------- ', data_idx)
         objects = dataset.get_label_objects(data_idx)
 
@@ -320,15 +323,17 @@ if __name__=='__main__':
         exit()
 
     if args.gen_v1_data:
+        
         extract_sunrgbd_data(os.path.join(BASE_DIR, 'sunrgbd_trainval/train_data_idx.txt'),
             split = 'training',
             output_folder = os.path.join(BASE_DIR, 'sunrgbd_pc_bbox_votes_50k_v1_train'),
             save_votes=True, num_point=50000, use_v1=True, skip_empty_scene=False)
+        '''
         extract_sunrgbd_data(os.path.join(BASE_DIR, 'sunrgbd_trainval/val_data_idx.txt'),
             split = 'training',
             output_folder = os.path.join(BASE_DIR, 'sunrgbd_pc_bbox_votes_50k_v1_val'),
             save_votes=True, num_point=50000, use_v1=True, skip_empty_scene=False)
-    
+            ''' 
     if args.gen_v2_data:
         extract_sunrgbd_data(os.path.join(BASE_DIR, 'sunrgbd_trainval/train_data_idx.txt'),
             split = 'training',

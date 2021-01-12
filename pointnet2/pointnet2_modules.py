@@ -12,6 +12,7 @@ Extended with the following:
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import time
 
 import os
 import sys
@@ -22,6 +23,7 @@ import pointnet2_utils
 import pytorch_utils as pt_utils
 from typing import List
 
+import numpy as np
 
 class _PointnetSAModuleBase(nn.Module):
 
@@ -231,22 +233,81 @@ class PointnetSAModuleVotes(nn.Module):
         """
 
         xyz_flipped = xyz.transpose(1, 2).contiguous()
-        if inds is None:
-            inds = pointnet2_utils.furthest_point_sample(xyz, self.npoint)
+        #inds2 = None
+        #inds3 = None
+        if inds is None:      
+            
+            #inds2, batch_distances2 = pointnet2_utils.FPS_light(xyz, self.npoint)           
+            #inds3 = pointnet2_utils.random_sampling(xyz, self.npoint)            
+            #start = time.time()
+            #inds = pointnet2_utils.furthest_point_sample(xyz, self.npoint)
+            #end = time.time()
+            #print("Runtime for FPS original: ", end - start)
+
+            start = time.time()
+            inds, batch_distances = pointnet2_utils.fps_light(xyz, self.npoint)    
+            end = time.time()
+            print("Runtime for FPS modified: ", end - start)
+            
         else:
             assert(inds.shape[1] == self.npoint)
-        new_xyz = pointnet2_utils.gather_operation(
+
+        #start = time.time()
+        #new_xyz = pointnet2_utils.gather_operation(
+        #    xyz_flipped, inds
+        #).transpose(1, 2).contiguous() if self.npoint is not None else None
+        #end = time.time()
+        #print("Runtime for gather op original: ", end - start)
+
+        start = time.time()
+        new_xyz = pointnet2_utils.gather_op_cpu(
             xyz_flipped, inds
         ).transpose(1, 2).contiguous() if self.npoint is not None else None
+        end = time.time()
+        print("Runtime for gather op modified: ", end - start)
 
+        
+        '''
+        if self.npoint == 2:
+            np.savetxt('FPS_result.csv', new_xyz.cpu().numpy()[0], delimiter=',')
+            new_xyz2 = pointnet2_utils.gather_operation(
+                xyz_flipped, inds2
+            ).transpose(1, 2).contiguous() if self.npoint is not None else None            
+            np.savetxt('FPS_result_light.csv', new_xyz2.cpu().numpy()[0], delimiter=',')
+
+            new_xyz4 = pointnet2_utils.gather_cpu(
+                xyz_flipped, inds2
+            ).transpose(1, 2).contiguous() if self.npoint is not None else None
+            np.savetxt('FPS_result_light_cpu.csv', new_xyz4.cpu().numpy()[0], delimiter=',')
+
+            new_xyz3 = pointnet2_utils.gather_operation(
+                xyz_flipped, inds3
+            ).transpose(1, 2).contiguous() if self.npoint is not None else None
+            np.savetxt('FPS_result_random.csv', new_xyz3.cpu().numpy()[0], delimiter=',')        
+
+
+        idx2 = pointnet2_utils.ball_query_cpu(self.radius, self.nsample, xyz, new_xyz4, batch_distances2, inds2)
+        print("-----------------------Ball query result")
+        print("All points:", xyz)
+        print("Centers GPU: ", new_xyz2)
+        print("Centers CPU: ", new_xyz4)
+        print("Distance: ", batch_distances2)
+        print("Balls: ", idx2)
+
+        grouped_features2, grouped_xyz2 = self.grouper(
+                xyz, new_xyz4, features
+            )
+
+        print(grouped_features2)
+        '''
         if not self.ret_unique_cnt:
-            grouped_features, grouped_xyz = self.grouper(
-                xyz, new_xyz, features
-            )  # (B, C, npoint, nsample)
+            grouped_features, ball_query_idx, grouped_xyz = self.grouper(
+                xyz, new_xyz, batch_distances, inds, features
+            )  # (B, C, npoint, nsample)            
         else:
-            grouped_features, grouped_xyz, unique_cnt = self.grouper(
+            grouped_features, ball_query_idx, grouped_xyz, unique_cnt = self.grouper(
                 xyz, new_xyz, features
-            )  # (B, C, npoint, nsample), (B,3,npoint,nsample), (B,npoint)
+            )  # (B, C, npoint, nsample), (B,3,npoint,nsample), (B,npoint)            
 
         new_features = self.mlp_module(
             grouped_features
@@ -267,7 +328,7 @@ class PointnetSAModuleVotes(nn.Module):
         new_features = new_features.squeeze(-1)  # (B, mlp[-1], npoint)
 
         if not self.ret_unique_cnt:
-            return new_xyz, new_features, inds
+            return new_xyz, new_features, inds, ball_query_idx
         else:
             return new_xyz, new_features, inds, unique_cnt
 
@@ -370,7 +431,8 @@ class PointnetFPModule(nn.Module):
 
     def forward(
             self, unknown: torch.Tensor, known: torch.Tensor,
-            unknow_feats: torch.Tensor, known_feats: torch.Tensor
+            unknow_feats: torch.Tensor, known_feats: torch.Tensor,
+            grouped_xyz: torch.Tensor, inds: torch.Tensor
     ) -> torch.Tensor:
         r"""
         Parameters
@@ -391,14 +453,43 @@ class PointnetFPModule(nn.Module):
         """
 
         if known is not None:
-            dist, idx = pointnet2_utils.three_nn(unknown, known)
-            dist_recip = 1.0 / (dist + 1e-8)
-            norm = torch.sum(dist_recip, dim=2, keepdim=True)
-            weight = dist_recip / norm
+            #start = time.time()    
+            #dist, idx = pointnet2_utils.three_nn(unknown, known)
+            #end = time.time()
+            #print("Runtime for Three nearest neighbor: ", end - start)
 
-            interpolated_feats = pointnet2_utils.three_interpolate(
-                known_feats, idx, weight
-            )
+            #dist_recip = 1.0 / (dist + 1e-8)
+            #norm = torch.sum(dist_recip, dim=2, keepdim=True)
+            #weight = dist_recip / norm
+
+            #start = time.time()    
+            #interpolated_feats = pointnet2_utils.three_interpolate(
+            #    known_feats, idx, weight
+            #)
+            #end = time.time()
+            #print("Runtime for Interpolation original: ", end - start)
+
+            start = time.time()            
+            idx = pointnet2_utils.inv_ball_query_nocuda(unknown, known, grouped_xyz, inds)
+            end = time.time()
+            print("Runtime for Inverse ball queryuda NOCUDA: ", end - start)
+            print("idx:", idx)
+            print("idx shape:", idx.shape)
+
+            start = time.time()            
+            interpolated_feats = pointnet2_utils.inv_interpolate_nocuda(known_feats, idx)
+            end = time.time()
+            print("Runtime for InvInterpolate_nocuda: ", end - start)     
+
+            #print("==========Interpolation original==========")
+            #print("shape: ", interpolated_feats.shape)
+            #print(interpolated_feats)
+            #print("==========Interpolation modified==========")
+            #print("shape: ", interpolated_feats3.shape)
+            #print(interpolated_feats3)
+
+
+
         else:
             interpolated_feats = known_feats.expand(
                 *known_feats.size()[0:2], unknown.size(1)
@@ -500,15 +591,29 @@ if __name__ == "__main__":
     from torch.autograd import Variable
     torch.manual_seed(1)
     torch.cuda.manual_seed_all(1)
-    xyz = Variable(torch.randn(2, 9, 3).cuda(), requires_grad=True)
-    xyz_feats = Variable(torch.randn(2, 9, 6).cuda(), requires_grad=True)
-
+    xyz = Variable(torch.randn(2, 9, 3).cuda(), requires_grad=False)
+    xyz_feats = Variable(torch.randn(2, 9, 6).cuda(), requires_grad=False)
+    '''
     test_module = PointnetSAModuleMSG(
         npoint=2, radii=[5.0, 10.0], nsamples=[6, 3], mlps=[[9, 3], [9, 6]]
     )
+    '''
+    test_module = PointnetSAModuleVotes(
+        npoint=2, radius=2.0, nsample=2, mlp=[9, 3], use_xyz=True, normalize_xyz=True
+    )
+
+    '''
+    PointnetSAModuleVotes(
+                npoint=2048,
+                radius=0.2,
+                nsample=64,
+                mlp=[input_feature_dim, 64, 64, 128],
+                use_xyz=True,
+                normalize_xyz=True
+    '''
     test_module.cuda()
     print(test_module(xyz, xyz_feats))
-
+    '''
     for _ in range(1):
         _, new_features = test_module(xyz, xyz_feats)
         new_features.backward(
@@ -516,3 +621,4 @@ if __name__ == "__main__":
         )
         print(new_features)
         print(xyz.grad)
+    '''

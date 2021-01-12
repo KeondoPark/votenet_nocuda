@@ -1,0 +1,44 @@
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2020-12-27 14:26:00.016176
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2020-12-27 14:33:54.250513
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2020-12-27 14:35:59.648897
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2020-12-27 14:40:38.710717
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2020-12-27 14:43:43.572251
+ ---- batch: 010 ----
+mean box_loss: 1.360841
+mean center_loss: 0.429487
+mean heading_cls_loss: 2.563810
+mean heading_reg_loss: 0.292734
+mean loss: 29.692004
+mean neg_ratio: 0.819287
+mean obj_acc: 0.732326
+mean objectness_loss: 0.133239
+mean pos_ratio: 0.031006
+mean sem_cls_loss: 2.677140
+mean size_cls_loss: 2.816502
+mean size_reg_loss: 0.100590
+mean vote_loss: 1.274025
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2020-12-27 15:08:31.766073

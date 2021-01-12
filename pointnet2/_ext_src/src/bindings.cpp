@@ -13,6 +13,16 @@ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
   m.def("gather_points_grad", &gather_points_grad);
   m.def("furthest_point_sampling", &furthest_point_sampling);
 
+  m.def("distance_from_avg", &distance_from_avg);
+  m.def("distance_from_point", &distance_from_point);
+  m.def("ball_query_nocuda", &ball_query_nocuda);
+  m.def("inv_interpolate_nocuda", &inv_interpolate_nocuda);
+  m.def("inv_ball_query_nocuda", &inv_ball_query_nocuda); 
+  m.def("inv_interpolate_nocuda_grad", &inv_interpolate_nocuda_grad);
+  m.def("group_points_nocuda", &group_points_nocuda);
+  m.def("group_points_grad_nocuda", &group_points_grad_nocuda); 
+     
+
   m.def("three_nn", &three_nn);
   m.def("three_interpolate", &three_interpolate);
   m.def("three_interpolate_grad", &three_interpolate_grad);

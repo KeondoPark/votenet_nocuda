@@ -36,7 +36,8 @@ __global__ void query_ball_point_kernel(int b, int n, int m, float radius,
       float d2 = (new_x - x) * (new_x - x) + (new_y - y) * (new_y - y) +
                  (new_z - z) * (new_z - z);
       if (d2 < radius2) {
-        if (cnt == 0) {
+        //initialize as k
+        if (cnt == 0) {          
           for (int l = 0; l < nsample; ++l) {
             idx[j * nsample + l] = k;
           }
