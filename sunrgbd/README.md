@@ -1,10 +1,3 @@
-### Modified votenet
-
-This codes are modified version of votenet from facebook. The modification is intended to make it run without CUDA library.
-(https://github.com/facebookresearch/votenet)
-
-
-
 ### Prepare SUN RGB-D Data
 
 1. Download SUNRGBD v2 data [HERE](http://rgbd.cs.princeton.edu/data/) (SUNRGBD.zip, SUNRGBDMeta2DBB_v2.mat, SUNRGBDMeta3DBB_v2.mat) and the toolkits (SUNRGBDtoolbox.zip). Move all the downloaded files under OFFICIAL_SUNRGBD. Unzip the zip files.
