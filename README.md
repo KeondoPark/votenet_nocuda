@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Deep Hough Voting for 3D Object Detection in Point Clouds
 Created by <a href="http://charlesrqi.com" target="_blank">Charles R. Qi</a>, <a href="https://orlitany.github.io/" target="_blank">Or Litany</a>, <a href="http://kaiminghe.com/" target="_blank">Kaiming He</a> and <a href="https://geometry.stanford.edu/member/guibas/" target="_blank">Leonidas Guibas</a> from <a href="https://research.fb.com/category/facebook-ai-research/" target="_blank">Facebook AI Research</a> and <a href="http://www.stanford.edu" target="_blank">Stanford University</a>.
 
@@ -103,3 +104,7 @@ votenet is relased under the MIT License. See the [LICENSE file](https://arxiv.o
 
 ## Change log
 10/20/2019: Fixed a bug of the 3D interpolation customized ops (corrected gradient computation). Re-training the model after the fix slightly improves mAP (less than 1 point).
+=======
+# votenet_nocuda
+Modified VoteNet to run without GPU support
+>>>>>>> 308750ea3601fd382dea407bdaa56f9751f4e072
