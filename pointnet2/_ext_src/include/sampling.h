@@ -6,9 +6,6 @@
 #pragma once
 #include <torch/extension.h>
 
-at::Tensor gather_points(at::Tensor points, at::Tensor idx);
-at::Tensor gather_points_grad(at::Tensor grad_out, at::Tensor idx, const int n);
-at::Tensor furthest_point_sampling(at::Tensor points, const int nsamples);
 at::Tensor distance_from_avg(at::Tensor points, const int n);
 at::Tensor distance_from_point(at::Tensor points, at::Tensor from_point, const int n);
 
