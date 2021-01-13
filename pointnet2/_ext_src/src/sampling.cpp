@@ -15,8 +15,7 @@ using namespace std;
 
 //Added
 at::Tensor distance_from_avg(at::Tensor points, const int n) {
-  CHECK_CONTIGUOUS(points);
-  CHECK_IS_FLOAT(points);   
+
 
   at::Tensor output =
       torch::zeros({n}, at::device(points.device()).dtype(at::ScalarType::Float));
@@ -56,8 +55,6 @@ at::Tensor distance_from_avg(at::Tensor points, const int n) {
 
 //Added
 at::Tensor distance_from_point(at::Tensor points, at::Tensor from_point, const int n) {
-  CHECK_CONTIGUOUS(points);
-  CHECK_IS_FLOAT(points);   
 
   at::Tensor output =
       torch::zeros({n}, at::device(points.device()).dtype(at::ScalarType::Float));

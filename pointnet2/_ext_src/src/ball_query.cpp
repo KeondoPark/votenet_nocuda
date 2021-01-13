@@ -16,10 +16,6 @@ int binarySearch(const float arr[], int l, int r, float x, int lu_opt);
 at::Tensor ball_query_nocuda(at::Tensor new_xyz, at::Tensor xyz, float radius,
                       const int nsample, at::Tensor batch_distances, at::Tensor inds,
                       at::Tensor arg_sort) {
-  CHECK_CONTIGUOUS(new_xyz);
-  CHECK_CONTIGUOUS(xyz);
-  CHECK_IS_FLOAT(new_xyz);
-  CHECK_IS_FLOAT(xyz);
   
   at::Tensor idx = torch::zeros({new_xyz.size(0), nsample},
                    at::device(new_xyz.device()).dtype(at::ScalarType::Int));

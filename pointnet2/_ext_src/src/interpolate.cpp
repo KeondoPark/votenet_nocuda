@@ -152,15 +152,6 @@ at::Tensor inv_interpolate_nocuda_grad(at::Tensor grad_out, at::Tensor idx, int 
 
 //Added
 at::Tensor inv_ball_query_nocuda(at::Tensor unknowns, at::Tensor knows, at::Tensor grouped_xyz, at::Tensor idx) {
-  CHECK_CONTIGUOUS(unknowns);
-  CHECK_CONTIGUOUS(knows);
-  CHECK_CONTIGUOUS(grouped_xyz);
-  CHECK_CONTIGUOUS(idx);
-  
-  CHECK_IS_FLOAT(unknowns);
-  CHECK_IS_FLOAT(knows);
-  CHECK_IS_INT(grouped_xyz);
-  CHECK_IS_INT(idx);
 
   int b = unknowns.size(0);
   int n = unknowns.size(1);

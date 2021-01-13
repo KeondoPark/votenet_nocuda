@@ -7,10 +7,6 @@
 #include "utils.h"
 
 at::Tensor group_points_nocuda(at::Tensor points, at::Tensor idx) {
-  CHECK_CONTIGUOUS(points);
-  CHECK_CONTIGUOUS(idx);
-  CHECK_IS_FLOAT(points);
-  CHECK_IS_INT(idx);
 
   at::Tensor output =
       torch::zeros({points.size(0), points.size(1), idx.size(1), idx.size(2)},
@@ -44,10 +40,6 @@ at::Tensor group_points_nocuda(at::Tensor points, at::Tensor idx) {
 }
 
 at::Tensor group_points_grad_nocuda(at::Tensor grad_out, at::Tensor idx, const int n) {
-  CHECK_CONTIGUOUS(grad_out);
-  CHECK_CONTIGUOUS(idx);
-  CHECK_IS_FLOAT(grad_out);
-  CHECK_IS_INT(idx);
 
   at::Tensor output =
       torch::zeros({grad_out.size(0), grad_out.size(1), n},
