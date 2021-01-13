@@ -4,7 +4,7 @@
 // LICENSE file in the root directory of this source tree.
 
 #include "group_points.h"
-#include "utils.h"
+
 
 at::Tensor group_points_nocuda(at::Tensor points, at::Tensor idx) {
 

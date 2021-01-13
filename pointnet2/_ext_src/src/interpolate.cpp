@@ -4,7 +4,6 @@
 // LICENSE file in the root directory of this source tree.
 
 #include "interpolate.h"
-#include "utils.h"
 #include <cstdlib>
 #include <experimental/random>
 
@@ -70,11 +69,7 @@ at::Tensor inv_interpolate_nocuda(at::Tensor points, at::Tensor idx) {
 // (B, c, m) -> (B, m, c)
 // (B, c, n) -> (B, c, n)
 at::Tensor inv_interpolate_nocuda(at::Tensor points, at::Tensor idx) {
-  CHECK_CONTIGUOUS(points);
-  CHECK_CONTIGUOUS(idx);  
-  CHECK_IS_FLOAT(points);
-  CHECK_IS_INT(idx);
-  
+
   
   int B = points.size(0);  
   int m = points.size(1);
@@ -113,10 +108,6 @@ at::Tensor inv_interpolate_nocuda(at::Tensor points, at::Tensor idx) {
 
 //Input and output is transposed
 at::Tensor inv_interpolate_nocuda_grad(at::Tensor grad_out, at::Tensor idx, int m) {
-  CHECK_CONTIGUOUS(grad_out);
-  CHECK_CONTIGUOUS(idx);  
-  CHECK_IS_FLOAT(grad_out);
-  CHECK_IS_INT(idx);
   
   
   int B = grad_out.size(0);  

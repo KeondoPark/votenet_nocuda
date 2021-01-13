@@ -4,7 +4,6 @@
 // LICENSE file in the root directory of this source tree.
 
 #include "ball_query.h"
-#include "utils.h"
 
 int binarySearch(const float arr[], int l, int r, float x, int lu_opt);
 
