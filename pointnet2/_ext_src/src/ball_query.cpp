@@ -9,12 +9,20 @@ int binarySearch(const float arr[], int l, int r, float x, int lu_opt);
 
 /*
   Assume batch_distances is sorted
+  arg_sort is sorted index of batch_distances.
+*/
+
+
+/*
+  Assume batch_distances is sorted
   arg_sort is sorted index of batch_distances
 */
 
 at::Tensor ball_query_nocuda(at::Tensor new_xyz, at::Tensor xyz, float radius,
                       const int nsample, at::Tensor batch_distances, at::Tensor inds,
                       at::Tensor arg_sort) {
+
+  //printf("Strting ball_query_nocuda...\n");
   
   at::Tensor idx = torch::zeros({new_xyz.size(0), nsample},
                    at::device(new_xyz.device()).dtype(at::ScalarType::Int));
@@ -59,10 +67,26 @@ at::Tensor ball_query_nocuda(at::Tensor new_xyz, at::Tensor xyz, float radius,
     float d = batch_d[j];
     //float d2 = batch_d2[j2];
 
-    int jmin = binarySearch(batch_d, 0, j, d-radius, 0);    
-    int jmax = binarySearch(batch_d, j, n-1, d+radius, 1);
+    //printf("Before binary search...\n");
+
+    int jmin = -1;
+    int jmax = -1;
+
+    if (batch_d[0] >= d - radius){
+      jmin = 0;
+    } else {
+      jmin = binarySearch(batch_d, 0, j, d-radius, 0);    
+    }
+
+    if (batch_d[n-1] <= d + radius){
+      jmax = n -1;
+    } else {   
+      jmax = binarySearch(batch_d, j, n-1, d+radius, 1);
+    }
     //int jmin2 = binarySearch(batch_d2, 0, j2, d2-radius, 0);
     //int jmax2 = binarySearch(batch_d2, j2, n-1, d2+radius, 1);
+
+    //printf("jmin: %d, jmax: %d\n", jmin, jmax);
 
     if (jmin < 0) jmin = 0;
     if (jmax < 0) jmax = n-1;
@@ -94,6 +118,10 @@ at::Tensor ball_query_nocuda(at::Tensor new_xyz, at::Tensor xyz, float radius,
         //}
       //}
       if (cnt >= nsample) break;      
+    }
+
+    if (cnt == 0){
+      //printf("No points in the ball. m_idx: %d, radius: %f\n", m_idx, radius);
     }    
   } 
 

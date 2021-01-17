@@ -129,8 +129,8 @@ class Pointnet2Backbone(nn.Module):
         end_points['sa4_features'] = features
         end_points['sa4_ball_query_idx'] = ball_query_idx
 
-        print("sa4 ball query idx shape", end_points['sa4_ball_query_idx'].shape)
-        print("sa4 inds shape", end_points['sa4_inds'].shape)
+        #print("sa4 ball query idx shape", end_points['sa4_ball_query_idx'].shape)
+        #print("sa4 inds shape", end_points['sa4_inds'].shape)
 
 
         # --------- 2 FEATURE UPSAMPLING LAYERS --------

@@ -42,3 +42,2069 @@ Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=
 Current learning rate: 0.001000
 Current BN decay momentum: 0.500000
 2020-12-27 15:08:31.766073
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+Let's use 4 GPUs!
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 15:05:48.898408
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+Let's use 4 GPUs!
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 15:10:52.870749
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 15:13:03.360796
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 15:28:24.933433
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 15:38:27.103668
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 15:43:17.030798
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 15:46:14.207019
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 15:49:12.263899
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 16:33:08.409294
+ ---- batch: 010 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.703076
+mean obj_acc: 0.618497
+mean objectness_loss: nan
+mean pos_ratio: 0.040430
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 020 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 030 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 040 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 050 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 060 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 070 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 080 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 090 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 100 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 110 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 120 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 130 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 140 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 150 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 16:58:48.736891
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+**** EPOCH 000 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 17:00:00.591222
+ ---- batch: 010 ----
+mean box_loss: 1.089700
+mean center_loss: 0.313147
+mean heading_cls_loss: 2.528568
+mean heading_reg_loss: 0.200879
+mean loss: 23.948344
+mean neg_ratio: 0.734375
+mean obj_acc: 0.771754
+mean objectness_loss: 0.150634
+mean pos_ratio: 0.051074
+mean sem_cls_loss: 2.628538
+mean size_cls_loss: 2.510691
+mean size_reg_loss: 0.071748
+mean vote_loss: 0.966963
+ ---- batch: 020 ----
+mean box_loss: 1.091556
+mean center_loss: 0.377605
+mean heading_cls_loss: 2.499082
+mean heading_reg_loss: 0.177346
+mean loss: 23.775952
+mean neg_ratio: 0.814404
+mean obj_acc: 0.946823
+mean objectness_loss: 0.113937
+mean pos_ratio: 0.040674
+mean sem_cls_loss: 2.304178
+mean size_cls_loss: 2.174079
+mean size_reg_loss: 0.069290
+mean vote_loss: 0.998653
+ ---- batch: 030 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.304736
+mean obj_acc: 0.371964
+mean objectness_loss: nan
+mean pos_ratio: 0.022705
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 040 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 050 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 060 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 070 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 080 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 090 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 100 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 110 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 120 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 130 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 140 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 150 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 160 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 170 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 180 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 190 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 200 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 210 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 220 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 230 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 240 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 250 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 260 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 270 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 280 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 290 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 300 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 310 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 320 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 330 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 340 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 350 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 360 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 370 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 380 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 390 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 400 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 410 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 420 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 430 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 440 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 450 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 460 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 470 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 480 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 490 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 500 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 510 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 520 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 530 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 540 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 550 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 560 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 570 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 580 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 590 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 600 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 610 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 620 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 630 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 640 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 650 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 660 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+eval mean box_loss: nan
+eval mean center_loss: nan
+eval mean heading_cls_loss: nan
+eval mean heading_reg_loss: nan
+eval mean loss: nan
+eval mean neg_ratio: 0.000000
+eval mean obj_acc: 0.000000
+eval mean objectness_loss: nan
+eval mean pos_ratio: 0.000000
+eval mean sem_cls_loss: nan
+eval mean size_cls_loss: nan
+eval mean size_reg_loss: nan
+eval mean vote_loss: nan
+eval bed Average Precision: 0.000000
+eval table Average Precision: 0.000000
+eval sofa Average Precision: 0.000000
+eval chair Average Precision: 0.000000
+eval toilet Average Precision: 0.000000
+eval desk Average Precision: 0.000000
+eval dresser Average Precision: 0.000000
+eval night_stand Average Precision: 0.000000
+eval bookshelf Average Precision: 0.000000
+eval bathtub Average Precision: 0.000000
+eval mAP: 0.000000
+eval bed Recall: 0.000000
+eval table Recall: 0.000000
+eval sofa Recall: 0.000000
+eval chair Recall: 0.000000
+eval toilet Recall: 0.000000
+eval desk Recall: 0.000000
+eval dresser Recall: 0.000000
+eval night_stand Recall: 0.000000
+eval bookshelf Recall: 0.000000
+eval bathtub Recall: 0.000000
+eval AR: 0.000000
+**** EPOCH 001 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-14 19:26:17.592064
+ ---- batch: 010 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 020 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 030 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 040 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 050 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 060 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 070 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 080 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 090 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 100 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 110 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 120 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 130 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 140 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 150 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 160 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 170 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 180 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 190 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 200 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 210 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 220 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 230 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 240 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 250 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 260 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 270 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 280 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 290 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 300 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 310 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 320 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 330 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 340 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 350 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 360 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 370 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 380 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+-> loaded checkpoint log_sunrgbd/checkpoint.tar (epoch: 1)
+**** EPOCH 001 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-15 11:26:37.568160
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+-> loaded checkpoint log_sunrgbd/checkpoint.tar (epoch: 1)
+**** EPOCH 001 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-15 11:36:18.915265
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+-> loaded checkpoint log_sunrgbd/checkpoint.tar (epoch: 1)
+**** EPOCH 001 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-15 11:42:58.423196
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+-> loaded checkpoint log_sunrgbd/checkpoint.tar (epoch: 1)
+**** EPOCH 001 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-15 11:51:36.064926
+ ---- batch: 010 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 020 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 030 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 040 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 050 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 060 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 070 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 080 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 090 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 100 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 110 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+-> loaded checkpoint log_sunrgbd/checkpoint.tar (epoch: 1)
+**** EPOCH 001 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-15 14:57:37.918695
+ ---- batch: 010 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 020 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+Namespace(DUMP_DIR='/home/gundo0102/votenet/votenet/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+-> loaded checkpoint log_sunrgbd/checkpoint.tar (epoch: 1)
+**** EPOCH 001 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-15 15:16:31.662574
+ ---- batch: 010 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 020 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 030 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+Namespace(DUMP_DIR='/home/gundo0102/votenet_cpponly/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+Namespace(DUMP_DIR='/home/gundo0102/votenet_cpponly/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+Namespace(DUMP_DIR='/home/gundo0102/votenet_cpponly/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+-> loaded checkpoint log_sunrgbd/checkpoint.tar (epoch: 1)
+**** EPOCH 001 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-15 21:22:07.441995
+Namespace(DUMP_DIR='/home/gundo0102/votenet_cpponly/log_sunrgbd', ap_iou_thresh=0.25, batch_size=8, bn_decay_rate=0.5, bn_decay_step=20, checkpoint_path=None, cluster_sampling='vote_fps', dataset='sunrgbd', dump_dir=None, dump_results=False, learning_rate=0.001, log_dir='log_sunrgbd', lr_decay_rates='0.1,0.1,0.1', lr_decay_steps='80,120,160', max_epoch=180, model='votenet', no_height=False, num_point=20000, num_target=256, overwrite=False, use_color=False, use_sunrgbd_v2=False, vote_factor=1, weight_decay=0)
+-> loaded checkpoint log_sunrgbd/checkpoint.tar (epoch: 1)
+**** EPOCH 001 ****
+Current learning rate: 0.001000
+Current BN decay momentum: 0.500000
+2021-01-15 21:25:00.052836
+ ---- batch: 010 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan
+ ---- batch: 020 ----
+mean box_loss: nan
+mean center_loss: nan
+mean heading_cls_loss: nan
+mean heading_reg_loss: nan
+mean loss: nan
+mean neg_ratio: 0.000000
+mean obj_acc: 0.000000
+mean objectness_loss: nan
+mean pos_ratio: 0.000000
+mean sem_cls_loss: nan
+mean size_cls_loss: nan
+mean size_reg_loss: nan
+mean vote_loss: nan

@@ -244,10 +244,10 @@ class PointnetSAModuleVotes(nn.Module):
             #end = time.time()
             #print("Runtime for FPS original: ", end - start)
 
-            start = time.time()
+            #start = time.time()
             inds, batch_distances = pointnet2_utils.fps_light(xyz, self.npoint)    
-            end = time.time()
-            print("Runtime for FPS modified: ", end - start)
+            #end = time.time()
+            #print("Runtime for FPS modified: ", end - start)
             
         else:
             assert(inds.shape[1] == self.npoint)
@@ -259,12 +259,13 @@ class PointnetSAModuleVotes(nn.Module):
         #end = time.time()
         #print("Runtime for gather op original: ", end - start)
 
-        start = time.time()
-        new_xyz = pointnet2_utils.gather_op_cpu(
+        #start = time.time()
+        #new_xyz = pointnet2_utils.gather_op_cpu(
+        new_xyz = pointnet2_utils.gather_op_nocuda(            
             xyz_flipped, inds
         ).transpose(1, 2).contiguous() if self.npoint is not None else None
-        end = time.time()
-        print("Runtime for gather op modified: ", end - start)
+        #end = time.time()
+        #print("Runtime for gather op modified: ", end - start)
 
         
         '''
@@ -469,17 +470,17 @@ class PointnetFPModule(nn.Module):
             #end = time.time()
             #print("Runtime for Interpolation original: ", end - start)
 
-            start = time.time()            
+            #start = time.time()            
             idx = pointnet2_utils.inv_ball_query_nocuda(unknown, known, grouped_xyz, inds)
-            end = time.time()
-            print("Runtime for Inverse ball queryuda NOCUDA: ", end - start)
-            print("idx:", idx)
-            print("idx shape:", idx.shape)
+            #end = time.time()
+            #print("Runtime for Inverse ball queryuda NOCUDA: ", end - start)
+            #print("idx:", idx)
+            #print("idx shape:", idx.shape)
 
-            start = time.time()            
+            #start = time.time()            
             interpolated_feats = pointnet2_utils.inv_interpolate_nocuda(known_feats, idx)
-            end = time.time()
-            print("Runtime for InvInterpolate_nocuda: ", end - start)     
+            #end = time.time()
+            #print("Runtime for InvInterpolate_nocuda: ", end - start)     
 
             #print("==========Interpolation original==========")
             #print("shape: ", interpolated_feats.shape)

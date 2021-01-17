@@ -146,7 +146,8 @@ print(len(TRAIN_DATALOADER), len(TEST_DATALOADER))
 
 # Init the model and optimzier
 MODEL = importlib.import_module(FLAGS.model) # import network module
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+#device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 num_input_channel = int(FLAGS.use_color)*3 + int(not FLAGS.no_height)*1
 
 if FLAGS.model == 'boxnet':
@@ -163,10 +164,10 @@ net = Detector(num_class=DATASET_CONFIG.num_class,
                vote_factor=FLAGS.vote_factor,
                sampling=FLAGS.cluster_sampling)
 
-if torch.cuda.device_count() > 1:
-  log_string("Let's use %d GPUs!" % (torch.cuda.device_count()))
+#if torch.cuda.device_count() > 1:
+#  log_string("Let's use %d GPUs!" % (torch.cuda.device_count()))
   # dim = 0 [30, xxx] -> [10, ...], [10, ...], [10, ...] on 3 GPUs
-  net = nn.DataParallel(net)
+#  net = nn.DataParallel(net)
 net.to(device)
 criterion = MODEL.get_loss
 

@@ -15,6 +15,8 @@ using namespace std;
 //Added
 at::Tensor distance_from_avg(at::Tensor points, const int n) {
 
+  //printf("Strting distance_from_avg...\n");
+
 
   at::Tensor output =
       torch::zeros({n}, at::device(points.device()).dtype(at::ScalarType::Float));
@@ -52,8 +54,68 @@ at::Tensor distance_from_avg(at::Tensor points, const int n) {
   return output;
 }
 
+
+at::Tensor gather_points_nocuda(at::Tensor points, at::Tensor idx) {
+  
+  int B = points.size(0);
+  int c = points.size(1);
+  int n = points.size(2);
+  int m = idx.size(1);
+
+  at::Tensor output =
+      torch::zeros({points.size(0), points.size(1), idx.size(1)},
+                   at::device(points.device()).dtype(at::ScalarType::Float));
+
+  const float* dataset = (float *) points.data<float>();
+  const int* inds = (int *) idx.data<int>();
+
+  float* gather = output.data<float>();
+
+  for (int b_idx = 0; b_idx < B; ++b_idx){
+    for (int m_idx = 0; m_idx < m; ++m_idx){
+      int center = inds[b_idx * m + m_idx];
+      for (int c_idx = 0; c_idx < c; ++c_idx){
+        gather[b_idx * c * m + c_idx * m + m_idx] = dataset[b_idx * c * n + c_idx * n + center];
+      }      
+    }
+  }
+
+  return output;
+}
+
+at::Tensor gather_points_grad_nocuda(at::Tensor grad_out, at::Tensor idx,
+                              const int n) {
+
+  int B = grad_out.size(0);
+  int c = grad_out.size(1);
+  int m = grad_out.size(2);
+
+
+  at::Tensor output =
+      torch::zeros({grad_out.size(0), grad_out.size(1), n},
+                   at::device(grad_out.device()).dtype(at::ScalarType::Float));
+  
+  const float* dataset = (float *) grad_out.data<float>(); 
+  const int* inds = (int *) idx.data<int>();   
+
+  float* grad_features = output.data<float>();
+
+  for (int b_idx = 0; b_idx < B; ++b_idx){
+    for (int m_idx = 0; m_idx < m; ++m_idx){
+      int center = inds[b_idx * m + m_idx];
+      for (int c_idx = 0; c_idx < c; ++c_idx){
+        grad_features[b_idx * c * n + c_idx * n + center] = dataset[b_idx * c * m + c_idx * m + m_idx];
+      }      
+    }
+  }
+
+  return output;
+}
+
 //Added
 at::Tensor distance_from_point(at::Tensor points, at::Tensor from_point, const int n) {
+
+  //printf("Strting distance_from_point...\n");
 
   at::Tensor output =
       torch::zeros({n}, at::device(points.device()).dtype(at::ScalarType::Float));

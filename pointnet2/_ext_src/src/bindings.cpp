@@ -18,5 +18,7 @@ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
   m.def("inv_interpolate_nocuda_grad", &inv_interpolate_nocuda_grad);
   m.def("group_points_nocuda", &group_points_nocuda);
   m.def("group_points_grad_nocuda", &group_points_grad_nocuda); 
+  m.def("gather_points_nocuda", &gather_points_nocuda);
+  m.def("gather_points_grad_nocuda", &gather_points_grad_nocuda);
   
 }

@@ -90,15 +90,18 @@ def compute_objectness_loss(end_points):
     # objectness_label: 1 if pred object center is within NEAR_THRESHOLD of any GT object
     # objectness_mask: 0 if pred object center is in gray zone (DONOTCARE), 1 otherwise
     euclidean_dist1 = torch.sqrt(dist1+1e-6)
-    objectness_label = torch.zeros((B,K), dtype=torch.long).cuda()
-    objectness_mask = torch.zeros((B,K)).cuda()
+    #objectness_label = torch.zeros((B,K), dtype=torch.long).cuda()
+    objectness_label = torch.zeros((B,K), dtype=torch.long)
+    #objectness_mask = torch.zeros((B,K)).cuda()
+    objectness_mask = torch.zeros((B,K))
     objectness_label[euclidean_dist1<NEAR_THRESHOLD] = 1
     objectness_mask[euclidean_dist1<NEAR_THRESHOLD] = 1
     objectness_mask[euclidean_dist1>FAR_THRESHOLD] = 1
 
     # Compute objectness loss
     objectness_scores = end_points['objectness_scores']
-    criterion = nn.CrossEntropyLoss(torch.Tensor(OBJECTNESS_CLS_WEIGHTS).cuda(), reduction='none')
+    #criterion = nn.CrossEntropyLoss(torch.Tensor(OBJECTNESS_CLS_WEIGHTS).cuda(), reduction='none')
+    criterion = nn.CrossEntropyLoss(torch.Tensor(OBJECTNESS_CLS_WEIGHTS), reduction='none')
     objectness_loss = criterion(objectness_scores.transpose(2,1), objectness_label)
     objectness_loss = torch.sum(objectness_loss * objectness_mask)/(torch.sum(objectness_mask)+1e-6)
 
@@ -156,7 +159,8 @@ def compute_box_and_sem_cls_loss(end_points, config):
     heading_residual_normalized_label = heading_residual_label / (np.pi/num_heading_bin)
 
     # Ref: https://discuss.pytorch.org/t/convert-int-into-one-hot-format/507/3
-    heading_label_one_hot = torch.cuda.FloatTensor(batch_size, heading_class_label.shape[1], num_heading_bin).zero_()
+    #heading_label_one_hot = torch.cuda.FloatTensor(batch_size, heading_class_label.shape[1], num_heading_bin).zero_()
+    heading_label_one_hot = torch.FloatTensor(batch_size, heading_class_label.shape[1], num_heading_bin).zero_()
     heading_label_one_hot.scatter_(2, heading_class_label.unsqueeze(-1), 1) # src==1 so it's *one-hot* (B,K,num_heading_bin)
     heading_residual_normalized_loss = huber_loss(torch.sum(end_points['heading_residuals_normalized']*heading_label_one_hot, -1) - heading_residual_normalized_label, delta=1.0) # (B,K)
     heading_residual_normalized_loss = torch.sum(heading_residual_normalized_loss*objectness_label)/(torch.sum(objectness_label)+1e-6)
@@ -168,12 +172,14 @@ def compute_box_and_sem_cls_loss(end_points, config):
     size_class_loss = torch.sum(size_class_loss * objectness_label)/(torch.sum(objectness_label)+1e-6)
 
     size_residual_label = torch.gather(end_points['size_residual_label'], 1, object_assignment.unsqueeze(-1).repeat(1,1,3)) # select (B,K,3) from (B,K2,3)
-    size_label_one_hot = torch.cuda.FloatTensor(batch_size, size_class_label.shape[1], num_size_cluster).zero_()
+    #size_label_one_hot = torch.cuda.FloatTensor(batch_size, size_class_label.shape[1], num_size_cluster).zero_()
+    size_label_one_hot = torch.FloatTensor(batch_size, size_class_label.shape[1], num_size_cluster).zero_()
     size_label_one_hot.scatter_(2, size_class_label.unsqueeze(-1), 1) # src==1 so it's *one-hot* (B,K,num_size_cluster)
     size_label_one_hot_tiled = size_label_one_hot.unsqueeze(-1).repeat(1,1,1,3) # (B,K,num_size_cluster,3)
     predicted_size_residual_normalized = torch.sum(end_points['size_residuals_normalized']*size_label_one_hot_tiled, 2) # (B,K,3)
 
-    mean_size_arr_expanded = torch.from_numpy(mean_size_arr.astype(np.float32)).cuda().unsqueeze(0).unsqueeze(0) # (1,1,num_size_cluster,3) 
+    #mean_size_arr_expanded = torch.from_numpy(mean_size_arr.astype(np.float32)).cuda().unsqueeze(0).unsqueeze(0) # (1,1,num_size_cluster,3) 
+    mean_size_arr_expanded = torch.from_numpy(mean_size_arr.astype(np.float32)).unsqueeze(0).unsqueeze(0) # (1,1,num_size_cluster,3) 
     mean_size_label = torch.sum(size_label_one_hot_tiled * mean_size_arr_expanded, 2) # (B,K,3)
     size_residual_label_normalized = size_residual_label / mean_size_label # (B,K,3)
     size_residual_normalized_loss = torch.mean(huber_loss(predicted_size_residual_normalized - size_residual_label_normalized, delta=1.0), -1) # (B,K,3) -> (B,K)
@@ -224,7 +230,8 @@ def get_loss(end_points, config):
     end_points['object_assignment'] = object_assignment
     total_num_proposal = objectness_label.shape[0]*objectness_label.shape[1]
     end_points['pos_ratio'] = \
-        torch.sum(objectness_label.float().cuda())/float(total_num_proposal)
+        torch.sum(objectness_label.float())/float(total_num_proposal)
+        #torch.sum(objectness_label.float().cuda())/float(total_num_proposal)
     end_points['neg_ratio'] = \
         torch.sum(objectness_mask.float())/float(total_num_proposal) - end_points['pos_ratio']
 

@@ -8,6 +8,8 @@
 
 at::Tensor group_points_nocuda(at::Tensor points, at::Tensor idx) {
 
+  //printf("Strting group_points_nocuda...\n");
+
   at::Tensor output =
       torch::zeros({points.size(0), points.size(1), idx.size(1), idx.size(2)},
                    at::device(points.device()).dtype(at::ScalarType::Float));
@@ -40,6 +42,8 @@ at::Tensor group_points_nocuda(at::Tensor points, at::Tensor idx) {
 }
 
 at::Tensor group_points_grad_nocuda(at::Tensor grad_out, at::Tensor idx, const int n) {
+
+  //printf("Strting group_points_grad_nocuda...\n");
 
   at::Tensor output =
       torch::zeros({grad_out.size(0), grad_out.size(1), n},

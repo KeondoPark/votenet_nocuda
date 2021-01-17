@@ -13,13 +13,15 @@ sys.path.append(os.path.join(ROOT_DIR, 'utils'))
 
 class SunrgbdDatasetConfig(object):
     def __init__(self):
-        self.num_class = 16
+        self.num_class = 10
         self.num_heading_bin = 12        
-        self.num_size_cluster = 16
+        self.num_size_cluster = 10
 
-        self.type2class={'bed':0, 'table':1, 'sofa':2, 'chair':3, 'toilet':4, 'desk':5, 'dresser':6, 'night_stand':7, 'bookshelf':8, 'bathtub':9, 'garbage_bin':10, 'box':11, 'cup': 12, 'bag':13, 'telephone':14, 'bottle':15}
+        #self.type2class={'bed':0, 'table':1, 'sofa':2, 'chair':3, 'toilet':4, 'desk':5, 'dresser':6, 'night_stand':7, 'bookshelf':8, 'bathtub':9, 'garbage_bin':10, 'box':11, 'cup': 12, 'bag':13, 'telephone':14, 'bottle':15}
+        self.type2class={'bed':0, 'table':1, 'sofa':2, 'chair':3, 'toilet':4, 'desk':5, 'dresser':6, 'night_stand':7, 'bookshelf':8, 'bathtub':9}
         self.class2type = {self.type2class[t]:t for t in self.type2class}
-        self.type2onehotclass={'bed':0, 'table':1, 'sofa':2, 'chair':3, 'toilet':4, 'desk':5, 'dresser':6, 'night_stand':7, 'bookshelf':8, 'bathtub':9, 'garbage_bin':10, 'box':11, 'cup':12, 'bag':13, 'telephone':14, 'bottle':15}
+        self.type2onehotclass={'bed':0, 'table':1, 'sofa':2, 'chair':3, 'toilet':4, 'desk':5, 'dresser':6, 'night_stand':7, 'bookshelf':8, 'bathtub':9}
+        #self.type2onehotclass={'bed':0, 'table':1, 'sofa':2, 'chair':3, 'toilet':4, 'desk':5, 'dresser':6, 'night_stand':7, 'bookshelf':8, 'bathtub':9, 'garbage_bin':10, 'box':11, 'cup':12, 'bag':13, 'telephone':14, 'bottle':15}
         self.type_mean_size = {'bathtub': np.array([0.765840,1.398258,0.472728]),
                           'bed': np.array([2.114256,1.620300,0.927272]),
                           'bookshelf': np.array([0.404671,1.071108,1.688889]),
@@ -29,13 +31,13 @@ class SunrgbdDatasetConfig(object):
                           'night_stand': np.array([0.500618,0.632163,0.683424]),
                           'sofa': np.array([0.923508,1.867419,0.845495]),
                           'table': np.array([0.791118,1.279516,0.718182]),
-                          'toilet': np.array([0.699104,0.454178,0.756250]),
-                          'garbage_bin': np.array([0.500618,0.632163,0.683424]),
-                          'box': np.array([0.382998,0.404510,0.363458]),                          
-                          'cup':np.array([0.128038,0.127202,0.150926]),
-                          'bag':np.array([0.325304,0.393772,0.376217]),
-                          'telephone':np.array([0.228536,0.223375,0.186226]),
-                          'bottle':np.array([0.134799,0.131866,0.261084])}
+                          'toilet': np.array([0.699104,0.454178,0.756250])}
+                          #'garbage_bin': np.array([0.500618,0.632163,0.683424]),
+                          #'box': np.array([0.382998,0.404510,0.363458]),                          
+                          #'cup':np.array([0.128038,0.127202,0.150926]),
+                          #'bag':np.array([0.325304,0.393772,0.376217]),
+                          #'telephone':np.array([0.228536,0.223375,0.186226]),
+                          #'bottle':np.array([0.134799,0.131866,0.261084])}
 
         self.mean_size_arr = np.zeros((self.num_size_cluster, 3))
         for i in range(self.num_size_cluster):

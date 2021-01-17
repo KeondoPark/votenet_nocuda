@@ -20,14 +20,15 @@ import sys
 import cv2
 import argparse
 from PIL import Image
+DATA_DIR = '/home/aiot'
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(BASE_DIR)
 sys.path.append(os.path.join(BASE_DIR, '../utils/'))
 import pc_util
 import sunrgbd_utils
 
-#DEFAULT_TYPE_WHITELIST = ['bed','table','sofa','chair','toilet','desk','dresser','night_stand','bookshelf','bathtub']
-DEFAULT_TYPE_WHITELIST = ['bed','table','sofa','chair','toilet','desk','dresser','night_stand','bookshelf','bathtub','garbage_bin','box','cup','bag','telephone','bottle']
+DEFAULT_TYPE_WHITELIST = ['bed','table','sofa','chair','toilet','desk','dresser','night_stand','bookshelf','bathtub']
+#DEFAULT_TYPE_WHITELIST = ['bed','table','sofa','chair','toilet','desk','dresser','night_stand','bookshelf','bathtub','garbage_bin','box','cup','bag','telephone','bottle']
 
 class sunrgbd_object(object):
     ''' Load and parse object data '''
@@ -192,7 +193,8 @@ def extract_sunrgbd_data(idx_filename, split, output_folder, num_point=20000,
             then three sets of GT votes for up to three objects. If the point is only in one
             object's OBB, then the three GT votes are the same.
     """
-    dataset = sunrgbd_object('./sunrgbd_trainval', split, use_v1=use_v1)
+    #dataset = sunrgbd_object('./sunrgbd_trainval', split, use_v1=use_v1)
+    dataset = sunrgbd_object('/home/aiot/sunrgbd_trainval', split, use_v1=use_v1)
     data_idx_list = [int(line.rstrip()) for line in open(idx_filename)]
 
     if not os.path.exists(output_folder):
@@ -324,22 +326,22 @@ if __name__=='__main__':
 
     if args.gen_v1_data:
         
-        extract_sunrgbd_data(os.path.join(BASE_DIR, 'sunrgbd_trainval/train_data_idx.txt'),
+        extract_sunrgbd_data(os.path.join(DATA_DIR, 'sunrgbd_trainval/train_data_idx.txt'),
             split = 'training',
             output_folder = os.path.join(BASE_DIR, 'sunrgbd_pc_bbox_votes_50k_v1_train'),
             save_votes=True, num_point=50000, use_v1=True, skip_empty_scene=False)
-        '''
-        extract_sunrgbd_data(os.path.join(BASE_DIR, 'sunrgbd_trainval/val_data_idx.txt'),
+        
+        extract_sunrgbd_data(os.path.join(DATA_DIR, 'sunrgbd_trainval/val_data_idx.txt'),
             split = 'training',
             output_folder = os.path.join(BASE_DIR, 'sunrgbd_pc_bbox_votes_50k_v1_val'),
             save_votes=True, num_point=50000, use_v1=True, skip_empty_scene=False)
-            ''' 
+             
     if args.gen_v2_data:
-        extract_sunrgbd_data(os.path.join(BASE_DIR, 'sunrgbd_trainval/train_data_idx.txt'),
+        extract_sunrgbd_data(os.path.join(DATA_DIR, 'sunrgbd_trainval/train_data_idx.txt'),
             split = 'training',
             output_folder = os.path.join(BASE_DIR, 'sunrgbd_pc_bbox_votes_50k_v2_train'),
             save_votes=True, num_point=50000, use_v1=False, skip_empty_scene=False)
-        extract_sunrgbd_data(os.path.join(BASE_DIR, 'sunrgbd_trainval/val_data_idx.txt'),
+        extract_sunrgbd_data(os.path.join(DATA_DIR, 'sunrgbd_trainval/val_data_idx.txt'),
             split = 'training',
             output_folder = os.path.join(BASE_DIR, 'sunrgbd_pc_bbox_votes_50k_v2_val'),
             save_votes=True, num_point=50000, use_v1=False, skip_empty_scene=False)

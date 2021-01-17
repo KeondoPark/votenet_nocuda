@@ -47,6 +47,7 @@ if __name__=='__main__':
         sys.path.append(os.path.join(ROOT_DIR, 'sunrgbd'))
         from sunrgbd_detection_dataset import DC # dataset config
         checkpoint_path = os.path.join(demo_dir, 'pretrained_votenet_on_sunrgbd.tar')
+        #checkpoint_path = os.path.join(demo_dir, 'checkpoint.tar')
         pc_path = os.path.join(demo_dir, 'input_pc_sunrgbd.ply')
     elif FLAGS.dataset == 'scannet':
         sys.path.append(os.path.join(ROOT_DIR, 'scannet'))
@@ -72,6 +73,10 @@ if __name__=='__main__':
         num_size_cluster=DC.num_size_cluster,
         mean_size_arr=DC.mean_size_arr).to(device)
     print('Constructed model.')
+    print("----MODEL----")
+    print(MODEL)
+    print("----net----")
+    print(net)
     
     # Load checkpoint
     optimizer = optim.Adam(net.parameters(), lr=0.001)

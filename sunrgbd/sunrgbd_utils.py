@@ -17,7 +17,8 @@ import cv2
 import os
 import scipy.io as sio # to load .mat files for depth points
 
-type2class={'bed':0, 'table':1, 'sofa':2, 'chair':3, 'toilet':4, 'desk':5, 'dresser':6, 'night_stand':7, 'bookshelf':8, 'bathtub':9,'garbage_bin':10, 'box':11, 'cup':12, 'bag':13, 'telephone':14, 'bottle':15}
+#type2class={'bed':0, 'table':1, 'sofa':2, 'chair':3, 'toilet':4, 'desk':5, 'dresser':6, 'night_stand':7, 'bookshelf':8, 'bathtub':9,'garbage_bin':10, 'box':11, 'cup':12, 'bag':13, 'telephone':14, 'bottle':15}
+type2class={'bed':0, 'table':1, 'sofa':2, 'chair':3, 'toilet':4, 'desk':5, 'dresser':6, 'night_stand':7, 'bookshelf':8, 'bathtub':9}
 class2type = {type2class[t]:t for t in type2class}
 
 
@@ -98,6 +99,7 @@ class SUNRGBD_Calibration(object):
         self.c_v = self.K[1,2]
    
     def project_upright_depth_to_camera(self, pc):
+
         ''' project point cloud from depth coord to camera coordinate
             Input: (N,3) Output: (N,3)
         '''

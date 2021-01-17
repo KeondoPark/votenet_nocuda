@@ -70,6 +70,7 @@ at::Tensor inv_interpolate_nocuda(at::Tensor points, at::Tensor idx) {
 // (B, c, n) -> (B, c, n)
 at::Tensor inv_interpolate_nocuda(at::Tensor points, at::Tensor idx) {
 
+  //printf("Strting inv_interpolate_nocuda...\n");
   
   int B = points.size(0);  
   int m = points.size(1);
@@ -86,13 +87,14 @@ at::Tensor inv_interpolate_nocuda(at::Tensor points, at::Tensor idx) {
   const int* inds = (int *) idx.data<int>();
 
   float* interpolated = output.data<float>();
+  float weight = 1 / cp;
 
   for(int b_idx = 0; b_idx < B; ++b_idx){
     for (int n_idx = 0; n_idx < n; ++n_idx){
       for (int cp_idx = 0; cp_idx < cp; ++cp_idx){
-        int w = inds[b_idx * n * cp + n_idx * cp + cp_idx];        
+        int center = inds[b_idx * n * cp + n_idx * cp + cp_idx];        
         for (int c_idx = 0; c_idx < c; ++c_idx){
-          interpolated[b_idx * c * n + n_idx * c + c_idx] += features[b_idx * c * m + w * c + c_idx];
+          interpolated[b_idx * c * n + n_idx * c + c_idx] += features[b_idx * c * m + center * c + c_idx] * weight;
         }         
       }
     }
@@ -107,8 +109,12 @@ at::Tensor inv_interpolate_nocuda(at::Tensor points, at::Tensor idx) {
 }
 
 //Input and output is transposed
+//Input: (B, n, c)
+//Output: (B, m, c)
+//Index(Inverse ball query result): (B, n, cp)
 at::Tensor inv_interpolate_nocuda_grad(at::Tensor grad_out, at::Tensor idx, int m) {
   
+  //printf("Strting inv_interpolate_nocuda_grad...\n");
   
   int B = grad_out.size(0);  
   int n = grad_out.size(1);
@@ -124,13 +130,14 @@ at::Tensor inv_interpolate_nocuda_grad(at::Tensor grad_out, at::Tensor idx, int 
   const int* inds = (int *) idx.data<int>();
 
   float* inv_intp = output.data<float>();
+  float weight = 1 / cp;
 
   for (int b_idx = 0; b_idx < B; ++b_idx){
     for (int n_idx = 0; n_idx < n; ++n_idx){
       for (int cp_idx = 0; cp_idx < cp; ++cp_idx){
-        int w = inds[b_idx * n * cp + n_idx * cp + cp_idx];
+        int center = inds[b_idx * n * cp + n_idx * cp + cp_idx];
         for (int c_idx = 0; c_idx < c; ++c_idx){
-          inv_intp[b_idx * c * m + c_idx * m + w] += grad[b_idx * c * n + n_idx * c + c_idx] / cp;
+          inv_intp[b_idx * c * m + center * c + c_idx] += grad[b_idx * c * n + n_idx * c + c_idx] * weight;
         }
       }
     }
@@ -143,6 +150,8 @@ at::Tensor inv_interpolate_nocuda_grad(at::Tensor grad_out, at::Tensor idx, int 
 
 //Added
 at::Tensor inv_ball_query_nocuda(at::Tensor unknowns, at::Tensor knows, at::Tensor grouped_xyz, at::Tensor idx) {
+
+  //printf("Strting inv_ball_query_nocuda...\n");
 
   int b = unknowns.size(0);
   int n = unknowns.size(1);
@@ -195,8 +204,29 @@ at::Tensor inv_ball_query_nocuda(at::Tensor unknowns, at::Tensor knows, at::Tens
 
       //If no center point is found, randomly assign center point
       if (j == 0){
+        //printf("No center point around. b_idx: %d, n_idx: %d\n", b_idx, n_idx);
+        float min_dist = 1e+10;
+        int min_m = -1;
+        float x = unknown_points[b_idx * n * 3 + n_idx * 3 + 0];
+        float y = unknown_points[b_idx * n * 3 + n_idx * 3 + 1];
+        float z = unknown_points[b_idx * n * 3 + n_idx * 3 + 2];
+        for (int m_idx = 0; m_idx < m; ++m_idx){
+          float center_x = known_points[b_idx * m * 3 + m_idx * 3 + 0];
+          float center_y = known_points[b_idx * m * 3 + m_idx * 3 + 1];
+          float center_z = known_points[b_idx * m * 3 + m_idx * 3 + 2];
+
+          float dist = (x - center_x) * (x - center_x) + (y - center_y) * (y - center_y) + (z - center_z) * (z - center_z);
+
+          if (min_dist > dist){
+            min_dist = dist;
+            min_m = m_idx;
+          } 
+        }
+
+
         while (j < cp){
-            centers[b_idx * n * cp + n_idx * cp + j] = std::experimental::randint(0, m);
+            //centers[b_idx * n * cp + n_idx * cp + j] = std::experimental::randint(0, m);
+            centers[b_idx * n * cp + n_idx * cp + j] = min_m;
             j++;
           }
       } else {

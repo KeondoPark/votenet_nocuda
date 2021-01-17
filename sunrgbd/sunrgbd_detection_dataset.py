@@ -27,6 +27,7 @@ from torch.utils.data import Dataset
 import scipy.io as sio # to load .mat files for depth points
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(BASE_DIR)
+DATA_DIR = os.path.dirname(os.path.dirname(BASE_DIR))
 sys.path.append(BASE_DIR)
 sys.path.append(os.path.join(ROOT_DIR, 'utils'))
 import pc_util
@@ -45,11 +46,11 @@ class SunrgbdDetectionVotesDataset(Dataset):
         assert(num_points<=50000)
         self.use_v1 = use_v1 
         if use_v1:
-            self.data_path = os.path.join(ROOT_DIR,
-                'sunrgbd/sunrgbd_pc_bbox_votes_50k_v1_%s'%(split_set))
+            self.data_path = os.path.join(DATA_DIR,
+                'sunrgbd_pc_bbox_votes_50k_v1_%s'%(split_set))
         else:
-            self.data_path = os.path.join(ROOT_DIR,
-                'sunrgbd/sunrgbd_pc_bbox_votes_50k_v2_%s'%(split_set))
+            self.data_path = os.path.join(DATA_DIR,
+                'sunrgbd_pc_bbox_votes_50k_v2_%s'%(split_set))
 
         self.raw_data_path = os.path.join(ROOT_DIR, 'sunrgbd/sunrgbd_trainval')
         self.scan_names = sorted(list(set([os.path.basename(x)[0:6] \
